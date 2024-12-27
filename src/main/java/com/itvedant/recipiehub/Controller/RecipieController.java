@@ -42,8 +42,9 @@ public class RecipieController {
     public ResponseEntity<Recipe> addRecipe(@RequestBody Recipe recipe) {
         return ResponseEntity.ok(recipeService.addRecipe(recipe));
     }
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteRecipe(@RequestParam int id) {
+   @CrossOrigin(origins = "http://localhost:5500")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteRecipe(@PathVariable int id) {
         recipeService.deleteRecipe(id);
         return ResponseEntity.ok("Recipe deleted successfully");
     }
