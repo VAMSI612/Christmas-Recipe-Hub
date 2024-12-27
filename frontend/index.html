@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Recipe Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Christmas Recipe Hub</h1>
+  </header>
+
+  <main>
+    <section id="search-section">
+      <h2>Search Recipes</h2>
+      <input type="text" id="ingredients" placeholder="Enter ingredients (e.g., sugar, butter)">
+      <button onclick="fetchRecipes()">Search</button>
+      <div id="recipe-container"></div>
+    </section>
+
+    <section id="add-recipe-section">
+      <h2>Add Recipe</h2>
+      <form id="add-recipe-form" onsubmit="addRecipe(event)">
+        <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+        <textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+        <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+        <button type="submit">Add Recipe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Christmas Recipe Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
