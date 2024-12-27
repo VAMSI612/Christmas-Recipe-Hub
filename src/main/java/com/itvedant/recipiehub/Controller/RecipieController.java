@@ -2,6 +2,7 @@ package com.itvedant.recipiehub.Controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.itvedant.recipiehub.Entity.Recipe;
 import com.itvedant.recipiehub.service.RecipeService;
 
+@CrossOrigin(origins = "http://localhost:5500")// In case of mentioning Live server
 @RestController
 @RequestMapping("/api/recipes")
 public class RecipieController {
